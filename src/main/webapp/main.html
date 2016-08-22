@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html ng-app="CoffeeApplication">
+<head>
+<title>Coffe Shop</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/bootswatch/3.2.0/sandstone/bootstrap.min.css">
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
+<link href="css/home.css" rel="stylesheet" type="text/css" />
+
+<script
+	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script
+	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+
+
+<body ng-controller="CoreController" data-ng-init="initCore()">
+
+	<div class="jumbotron">
+		<div class="container">
+			<h1>Kahveci Efendi </h1>
+
+		</div>
+	
+			<h3>Kullanici: {{username}}</h3>
+			<div class="row">
+					<div class="container">
+						<ul class="nav nav-pills" role="tablist">
+							<li class="active"><a href="#/">home</a></li>
+							<li ng-show="authenticated"><a href="" ng-click="logout()">logout</a></li>
+							
+						</ul>
+					</div>
+
+		</div>
+
+	</div>
+
+	<div class="container ">
+		<div class="btn-group">
+			<button ng-show="isAdmin" type="button" class="coffee_button btn btn-info"
+				ng-click="showDrinkPage()">ICECEK VE EKLENTILER</button>
+			<button ng-show="!isAdmin"  type="button" class="btn btn-info" ng-click="showOrderPage()">SIPARIS</button>
+			<button ng-show="isAdmin" type="button" class="btn btn-info" ng-click="showStatsPage()">RAPOR</button>
+		</div>
+
+		<div ng-show="loginPage" ng-controller="LoginController">
+		</div>
+
+		<div ng-show="orderPage" ng-controller="OrderController"
+			data-ng-init="initOrder()">
+
+			<div class="container-fluid" id="order_page">
+				<h1>SIPARIS</h1>
+				<div class="row">
+
+
+					<div class="col-sm-6" style="background-color: #f1f1f1;">
+						<div class="row">
+							<div class="col-sm-6 drink_list_container">
+								<h3>Icecekler</h3>
+
+								<table class="table table-striped">
+									<thead>
+										<tr>
+											<th>No</th>
+											<th>Isim</th>
+											<th>Fiyat</th>
+											<th></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr ng-repeat="orderCoffee in orderCoffees" class="coffee{{$index}}")>
+											<td>{{$index+1}}</td>
+											<td>{{orderCoffee.name}}</td>
+											<td>{{orderCoffee.cost}} TL</td>
+											<td><a href="#" ng-click="selectCoffee(orderCoffee)">
+
+
+													<span class="glyphicon glyphicon-plus"></span>
+											</a></td>
+										</tr>
+
+									</tbody>
+								</table>
+							</div>
+							<div class="col-sm-6 drink_list_container">
+								<h3>Eklentiler</h3>
+
+								<form role="form">
+
+									<table class="table table-striped">
+										<thead>
+											<tr>
+												<th>Miktar</th>
+												<th>Isim</th>
+												<th>Fiyat</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr ng-repeat="condiment in orderCondiments">
+												<td><input type="text"
+													class="form-control orderCondimentClass" id="orderCodiment"
+													ng-model="orderCondimentArray[condiment.id]" value="0"></td>
+												<td>{{condiment.name}}</td>
+												<td>{{condiment.cost}} TL</td>
+												<td></td>
+											</tr>
+										</tbody>
+									</table>
+
+									<button type="button" class="btn btn-success"
+										ng-click="addDrinkToBasket()">Ekle</button>
+								</form>
+							</div>
+						</div>
+
+
+					</div>
+
+					<div class="col-sm-6 ">
+						<h3>Sepet</h3>
+						<table class="table table-striped">
+							<thead>
+								<tr>
+									<th>Isim</th>
+									<th>Fiyat</th>
+									<th></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr ng-repeat="cartOrderItem in (cartOrder.orderItems)">
+									<td>{{cartOrderItem.beverage.name}}</td>
+									<td>{{cartOrderItem.totalCost}} TL</td>
+									<td><a href="#"
+										ng-click="deleteFromBasket($index)"><span
+											class="glyphicon glyphicon-remove"></span></a>&nbsp;</td>
+<!-- 									<td  ng-repeat="cartOrderItemDetails in (cartOrder.orderItems[$index].orderItemDetails)"> -->
+<!-- 										<span>{{cartOrderItemDetails.condiment.name}}</span> -->
+<!-- 										<span>{{cartOrderItemDetails.condiment.cost}}</span> -->
+<!-- 										<span>{{cartOrderItemDetails.count}}</span> -->
+<!-- 									</td> -->
+
+
+
+
+								</tr>
+								<tr>
+									<td>Toplam Fiyat = {{cartOrder.totalCost}} TL</td>
+									<td> Indirimli Toplam Fiyat {{cartOrder.reducedCost}} TL</td>
+									<td></td>
+									
+								</tr>
+								
+							</tbody>
+						</table>
+						<button type="button" class="btn btn-success"
+										ng-click="checkOutTheBasket()">Siparisi Bitir</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div ng-show="drinkManagementPage"
+			ng-controller="DrinkManagementController" data-ng-init="initDrinks()">
+			<div class="container-fluid" id="drink_management_page">
+
+				<h1>ICECEK VE EKLENTI YONETIMI</h1>
+				<div class="row">
+					<div class="col-sm-4 drink_edit_container">
+						<div class="btn-group">
+							<button type="button" class="coffee_button btn btn-primary"
+								ng-click="clickCoffeeButton()">Icecek</button>
+							<button type="button" class="btn btn-primary"
+								ng-click="clickCondimentButton()">Eklenti</button>
+						</div>
+						<div ng-show="coffeAddContent" class="coffee_content form_class">
+							<form role="form">
+								<div class="form-group">
+									<label for="name">Icecek Adi:</label> <input type="text"
+										class="form-control" id="coffee_name" ng-model="coffeeName">
+								</div>
+								<div class="form-group">
+									<label for="price">Icecek Fiyati:</label> <input type="text"
+										class="form-control" id="coffee_price" ng-model="coffeePrice">
+								</div>
+								<button type="button" class="btn btn-success"
+									ng-click="addNewCoffee()">Ekle</button>
+
+							</form>
+						</div>
+						<div ng-show="condimentAddContent"
+							class="condiment_content form_class">
+							<form role="form">
+								<div class="form-group">
+									<label for="name">Eklenti Adi:</label> <input type="text"
+										class="form-control" id="condiment_name"
+										ng-model="condimentName">
+								</div>
+								<div class="form-group">
+									<label for="price">Eklenti Fiyati:</label> <input type="text"
+										class="form-control" id="condiment_price"
+										ng-model="condimentPrice">
+								</div>
+								<button type="button" class="btn btn-success"
+									ng-click="addNewCondiment()">Ekle</button>
+
+							</form>
+						</div>
+					</div>
+
+					<div class="col-sm-8" style="background-color: #f1f1f1;">
+						<div class="row">
+							<div class="col-sm-6 drink_list_container">
+								<h3>Icecekler</h3>
+
+								<table class="table table-striped">
+									<thead>
+										<tr>
+											<th>Isim</th>
+											<th>Fiyat</th>
+											<th></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr ng-repeat="coffee in coffees">
+											<td>{{coffee.name}}</td>
+											<td>{{coffee.cost}} TL</td>
+											<td><a href="#"
+												ng-click="deleteDrink(coffee.id, coffeType )"><span
+													class="glyphicon glyphicon-remove"></span></a>&nbsp; <a
+												href="#" ng-click="addDrinkToModal(coffee, coffeType)"
+												data-toggle="modal" data-target="#coffeeModal"> <span
+													class="glyphicon glyphicon-edit"></span>
+											</a></td>
+										</tr>
+
+									</tbody>
+								</table>
+							</div>
+							<div class="col-sm-6 drink_list_container">
+								<h3>Eklentiler</h3>
+								<table class="table table-striped">
+									<thead>
+										<tr>
+											<th>Isim</th>
+											<th>Fiyat</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr ng-repeat="condiment in condiments">
+											<td>{{condiment.name}}</td>
+											<td>{{condiment.cost}} TL</td>
+											<td><a href="#"
+												ng-click="deleteDrink(condiment.id, condimentType)"><span
+													class="glyphicon glyphicon-remove"></span></a>&nbsp; <a
+												href="#"
+												ng-click="addDrinkToModal(condiment, condimentType)"
+												data-toggle="modal" data-target="#condimentModal"> <span
+													class="glyphicon glyphicon-edit"></span>
+											</a></td>
+										</tr>
+
+
+									</tbody>
+								</table>
+							</div>
+						</div>
+
+
+					</div>
+				</div>
+
+				<div class="modal fade" id="coffeeModal" role="dialog">
+					<div class="modal-dialog">
+
+						<!-- Modal content-->
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+								<h4 class="modal-title">Icecek Duzenle</h4>
+							</div>
+							<div class="modal-body">
+								<p>Icecegi duzenlemek icin asagıdaki bilgileri girin.</p>
+								<form role="form">
+									<div class="form-group">
+										<label for="name">Icecek Adi:</label> <input type="text"
+											class="form-control" id="coffee_name"
+											ng-model="modalCoffee.name">
+									</div>
+									<div class="form-group">
+										<label for="price">Icecek Fiyati:</label> <input type="text"
+											class="form-control" id="coffee_price"
+											ng-model="modalCoffee.cost">
+									</div>
+									<button type="button" class="btn btn-info"
+										ng-click="editDrink(modalCoffee,coffeType)">Duzenle</button>
+
+								</form>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default"
+									data-dismiss="modal">Close</button>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				<div class="modal fade" id="condimentModal" role="dialog">
+					<div class="modal-dialog">
+
+						<!-- Modal content-->
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+								<h4 class="modal-title">Eklenti Duzenle</h4>
+							</div>
+							<div class="modal-body">
+								<p>Eklentiyi duzenlemek icin asagıdaki bilgileri girin.</p>
+								<form role="form">
+									<div class="form-group">
+										<label for="name">Eklenti Adi:</label> <input type="text"
+											class="form-control" id="condiment_name"
+											ng-model="modalCondiment.name">
+									</div>
+									<div class="form-group">
+										<label for="price">Eklenti Fiyati:</label> <input type="text"
+											class="form-control" id="condiment_price"
+											ng-model="modalCondiment.cost">
+									</div>
+									<button type="button" class="btn btn-info"
+										ng-click="editDrink(modalCondiment, condimentType)">Duzenle</button>
+
+								</form>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default"
+									data-dismiss="modal">Close</button>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<div ng-show="statsPage" ng-controller="StatsController"
+			data-ng-init="initStats()">
+			<div class="container-fluid" id="drink_management_page">
+
+				<h1>SIPARIS RAPORU</h1>
+
+				<div class="col-sm-8" style="background-color: #f1f1f1;">
+					<div class="row">
+						<div class="btn-group">
+							<button type="button" class="coffee_button btn btn-primary"
+								ng-click="clickUserStatsButton()">Kullanicilar</button>
+							<button type="button" class="coffee_button btn btn-primary"
+								ng-click="clickCoffeeStatsButton()">Icecekler</button>
+							<button type="button" class="btn btn-primary"
+								ng-click="clickCondimentStatsButton()">Eklenti</button>
+						</div>
+						<div class="col-sm-6 drink_list_container">
+							<h3>{{statsHeader}}</h3>
+
+							<table class="table table-striped">
+								<thead>
+									<tr>
+										<th>Isim</th>
+										<th>Toplam Fiyat</th>
+										<th>{{reducedCost}}</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr ng-repeat="stat in stats">
+										<td>{{stat[0]}}</td>
+										<td>{{stat[1]}} TL</td>
+										<td>{{stat[2]}} TL</td>
+									</tr>
+
+								</tbody>
+							</table>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+
+
+
+	<script src="js/CoreController.js"></script>
+	<script src="js/DrinkManagementController.js"></script>
+	<script src="js/OrderController.js"></script>
+	<script src="js/StatsController.js"></script>
+	<script src="js/LoginController.js"></script>
+	
+</body>
+</html>

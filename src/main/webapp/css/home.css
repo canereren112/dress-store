@@ -1,0 +1,21 @@
+.form_class{
+	border:1px solid #cccccc;
+	padding: 15px;
+	background-color: #c7c7c7;
+	
+}
+
+.drink_edit_container{
+	padding: 15px;
+}
+
+.drink_list_container{
+	padding: 15px;
+	padding-top:0px;
+}
+
+.orderCondimentClass{
+	width : 20px;
+	padding: 5px;
+	height : 20px;
+}
