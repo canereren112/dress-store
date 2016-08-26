@@ -1,13 +1,13 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.eren.assignment.sahibinden</groupId>
-	<artifactId>KahveciEfendi</artifactId>
+	<groupId>com.eren.dstore</groupId>
+	<artifactId>DressStore</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 
-	<name>KahveciEfendi</name>
-	<description>Kahveci Efendi Web Application</description>
+	<name>DressStore</name>
+	<description>Dress Store Web Application</description>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -27,14 +27,14 @@
 		<jackson.version>2.8.1</jackson.version>
 		<tomcat7-maven-plugin.version>2.2</tomcat7-maven-plugin.version>
 		<tomcat.port>9966</tomcat.port>
-		<tomcat.path>/kahveciefendi</tomcat.path>
+		<tomcat.path>/dstore</tomcat.path>
 	</properties>
 
 	<developers>
 		<developer>
-			<id>firat.eren</id>
-			<name>Omer Faruk Eren</name>
-			<email>firat52@gmail.com</email>
+			<id>caner.eren</id>
+			<name>Omer Caner Eren</name>
+			<email>omer.caner.eren@gmail.com</email>
 		</developer>
 	</developers>
 
