@@ -1,4 +1,4 @@
-package com.eren.assignment.sahibinden.entity;
+package com.eren.dstore.entity;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;

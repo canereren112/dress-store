@@ -1,12 +1,12 @@
-package com.eren.assignment.sahibinden.dao.jpa;
+package com.eren.dstore.dao.jpa;
 
 import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
-import com.eren.assignment.sahibinden.dao.OrderItemDetailDao;
-import com.eren.assignment.sahibinden.entity.OrderItemDetail;
-import com.eren.assignment.sahibinden.service.model.EntityStats;
+import com.eren.dstore.dao.OrderItemDetailDao;
+import com.eren.dstore.entity.OrderItemDetail;
+import com.eren.dstore.service.model.EntityStats;
 
 @Repository
 public class OrderItemDetailDaoJpa extends BaseDaoJpa<OrderItemDetail> implements OrderItemDetailDao {

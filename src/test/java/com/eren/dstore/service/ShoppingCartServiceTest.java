@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.eren.assignment.sahibinden.service;
+package com.eren.dstore.service;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,10 +18,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.eren.assignment.sahibinden.entity.OrderItem;
-import com.eren.assignment.sahibinden.entity.OrderItemDetail;
-import com.eren.assignment.sahibinden.exception.ServiceResponse;
-import com.eren.assignment.sahibinden.service.model.ShoppingCart;
+import com.eren.dstore.entity.OrderItem;
+import com.eren.dstore.entity.OrderItemDetail;
+import com.eren.dstore.exception.ServiceResponse;
+import com.eren.dstore.service.model.ShoppingCart;
 
 import junit.framework.Assert;
 
@@ -70,7 +70,7 @@ public class ShoppingCartServiceTest {
 	/**
 	 * Sepete ekleme test senaryosu
 	 * Test method for
-	 * {@link com.eren.assignment.sahibinden.service.ShoppingCartService#addToCart(java.lang.String, com.eren.assignment.sahibinden.service.model.ShoppingCart, com.eren.assignment.sahibinden.entity.OrderItem)}.
+	 * {@link com.eren.dstore.service.ShoppingCartService#addToCart(java.lang.String, com.eren.dstore.service.model.ShoppingCart, com.eren.dstore.entity.OrderItem)}.
 	 */
 	@Test
 	public void testAddToCart() throws Exception {
@@ -84,7 +84,7 @@ public class ShoppingCartServiceTest {
 	/**
 	 * Sepetten cikarma test senaryosu
 	 * Test method for
-	 * {@link com.eren.assignment.sahibinden.service.ShoppingCartService#removeFromCart(com.eren.assignment.sahibinden.service.model.ShoppingCart, int)}.
+	 * {@link com.eren.dstore.service.ShoppingCartService#removeFromCart(com.eren.dstore.service.model.ShoppingCart, int)}.
 	 */
 	@Test
 	public void testRemoveFromCart() throws Exception {
@@ -98,7 +98,7 @@ public class ShoppingCartServiceTest {
 	/**
 	 * Sepeti satin alma test senaryosu
 	 * Test method for
-	 * {@link com.eren.assignment.sahibinden.service.ShoppingCartService#removeFromCart(com.eren.assignment.sahibinden.service.model.ShoppingCart, int)}.
+	 * {@link com.eren.dstore.service.ShoppingCartService#removeFromCart(com.eren.dstore.service.model.ShoppingCart, int)}.
 	 */
 	@Test
 	public void checkoutOrder() throws Exception {

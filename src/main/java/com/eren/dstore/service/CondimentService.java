@@ -1,9 +1,9 @@
-package com.eren.assignment.sahibinden.service;
+package com.eren.dstore.service;
 
 import java.util.List;
 
-import com.eren.assignment.sahibinden.entity.Condiment;
-import com.eren.assignment.sahibinden.exception.ServiceResponse;
+import com.eren.dstore.entity.Condiment;
+import com.eren.dstore.exception.ServiceResponse;
 
 public interface CondimentService {
 	public List<Condiment> getAllCondiments();

@@ -1,4 +1,4 @@
-package com.eren.assignment.sahibinden.exception;
+package com.eren.dstore.exception;
 
 import java.io.Serializable;
 

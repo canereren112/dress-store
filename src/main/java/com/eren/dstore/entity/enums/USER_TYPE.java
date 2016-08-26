@@ -1,4 +1,4 @@
-package com.eren.assignment.sahibinden.entity.enums;
+package com.eren.dstore.entity.enums;
 
 public enum USER_TYPE {
 	MEMBER("M"), ADMIN("A");

@@ -1,4 +1,4 @@
-package com.eren.assignment.sahibinden.service.discount;
+package com.eren.dstore.service.discount;
 
 import java.util.Arrays;
 import java.util.List;

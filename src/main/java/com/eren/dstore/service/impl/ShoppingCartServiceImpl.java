@@ -1,4 +1,4 @@
-package com.eren.assignment.sahibinden.service.impl;
+package com.eren.dstore.service.impl;
 
 import java.util.List;
 
@@ -7,20 +7,20 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.eren.assignment.sahibinden.entity.Beverage;
-import com.eren.assignment.sahibinden.entity.Condiment;
-import com.eren.assignment.sahibinden.entity.Order;
-import com.eren.assignment.sahibinden.entity.OrderItem;
-import com.eren.assignment.sahibinden.entity.OrderItemDetail;
-import com.eren.assignment.sahibinden.entity.User;
-import com.eren.assignment.sahibinden.exception.ResponseCodes;
-import com.eren.assignment.sahibinden.exception.ServiceRuntimeException;
-import com.eren.assignment.sahibinden.service.BeverageService;
-import com.eren.assignment.sahibinden.service.CondimentService;
-import com.eren.assignment.sahibinden.service.ShoppingCartService;
-import com.eren.assignment.sahibinden.service.UserService;
-import com.eren.assignment.sahibinden.service.discount.DiscountService;
-import com.eren.assignment.sahibinden.service.model.ShoppingCart;
+import com.eren.dstore.entity.Beverage;
+import com.eren.dstore.entity.Condiment;
+import com.eren.dstore.entity.Order;
+import com.eren.dstore.entity.OrderItem;
+import com.eren.dstore.entity.OrderItemDetail;
+import com.eren.dstore.entity.User;
+import com.eren.dstore.exception.ResponseCodes;
+import com.eren.dstore.exception.ServiceRuntimeException;
+import com.eren.dstore.service.BeverageService;
+import com.eren.dstore.service.CondimentService;
+import com.eren.dstore.service.ShoppingCartService;
+import com.eren.dstore.service.UserService;
+import com.eren.dstore.service.discount.DiscountService;
+import com.eren.dstore.service.model.ShoppingCart;
 
 @Service
 @Transactional(readOnly = true, propagation = Propagation.SUPPORTS)

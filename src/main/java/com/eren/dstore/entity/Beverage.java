@@ -1,10 +1,10 @@
-package com.eren.assignment.sahibinden.entity;
+package com.eren.dstore.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
-import com.eren.assignment.sahibinden.entity.enums.HISTORICAL_ENTITY_STATUS;
+import com.eren.dstore.entity.enums.HISTORICAL_ENTITY_STATUS;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity

@@ -1,4 +1,4 @@
-package com.eren.assignment.sahibinden.web;
+package com.eren.dstore.web;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,13 +10,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.eren.assignment.sahibinden.entity.OrderItemDetail;
-import com.eren.assignment.sahibinden.entity.OrderItem;
-import com.eren.assignment.sahibinden.exception.ServiceResponse;
-import com.eren.assignment.sahibinden.service.BeverageService;
-import com.eren.assignment.sahibinden.service.CondimentService;
-import com.eren.assignment.sahibinden.service.OrderService;
-import com.eren.assignment.sahibinden.service.model.EntityStats;
+import com.eren.dstore.entity.OrderItemDetail;
+import com.eren.dstore.entity.OrderItem;
+import com.eren.dstore.exception.ServiceResponse;
+import com.eren.dstore.service.BeverageService;
+import com.eren.dstore.service.CondimentService;
+import com.eren.dstore.service.OrderService;
+import com.eren.dstore.service.model.EntityStats;
 
 @RestController
 public class StatsController extends BaseController {

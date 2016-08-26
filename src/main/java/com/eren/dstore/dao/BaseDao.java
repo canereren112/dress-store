@@ -1,4 +1,4 @@
-package com.eren.assignment.sahibinden.dao;
+package com.eren.dstore.dao;
 
 public interface BaseDao<E> {
 	public void update(E entity);

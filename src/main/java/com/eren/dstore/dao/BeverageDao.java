@@ -1,8 +1,8 @@
-package com.eren.assignment.sahibinden.dao;
+package com.eren.dstore.dao;
 
 import java.util.List;
 
-import com.eren.assignment.sahibinden.entity.Beverage;
+import com.eren.dstore.entity.Beverage;
 
 public interface BeverageDao extends BaseDao<Beverage> {
 	public List<Beverage> getAllBeverages();

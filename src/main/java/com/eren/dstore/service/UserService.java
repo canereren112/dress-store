@@ -1,6 +1,6 @@
-package com.eren.assignment.sahibinden.service;
+package com.eren.dstore.service;
 
-import com.eren.assignment.sahibinden.entity.User;
+import com.eren.dstore.entity.User;
 
 public interface UserService {
 	public User getUser(long id);

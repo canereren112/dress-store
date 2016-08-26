@@ -1,11 +1,11 @@
-package com.eren.assignment.sahibinden.entity;
+package com.eren.dstore.entity;
 
 import java.io.Serializable;
 import javax.persistence.*;
 
-import com.eren.assignment.sahibinden.entity.BaseEntity;
-import com.eren.assignment.sahibinden.entity.Condiment;
-import com.eren.assignment.sahibinden.entity.OrderItem;
+import com.eren.dstore.entity.BaseEntity;
+import com.eren.dstore.entity.Condiment;
+import com.eren.dstore.entity.OrderItem;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
 /**

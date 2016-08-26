@@ -1,6 +1,6 @@
-package com.eren.assignment.sahibinden.service.discount;
+package com.eren.dstore.service.discount;
 
-import com.eren.assignment.sahibinden.service.model.ShoppingCart;
+import com.eren.dstore.service.model.ShoppingCart;
 
 /**
  * Generic Discount Service 

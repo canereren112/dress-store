@@ -1,9 +1,9 @@
-package com.eren.assignment.sahibinden.service;
+package com.eren.dstore.service;
 
 import java.util.List;
 
-import com.eren.assignment.sahibinden.entity.Beverage;
-import com.eren.assignment.sahibinden.exception.ServiceResponse;
+import com.eren.dstore.entity.Beverage;
+import com.eren.dstore.exception.ServiceResponse;
 
 public interface BeverageService {
 	public List<Beverage> getAllBeverages();

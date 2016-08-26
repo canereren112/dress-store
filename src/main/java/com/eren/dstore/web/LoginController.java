@@ -1,4 +1,4 @@
-package com.eren.assignment.sahibinden.web;
+package com.eren.dstore.web;
 
 import java.security.Principal;
 
@@ -16,8 +16,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.eren.assignment.sahibinden.entity.User;
-import com.eren.assignment.sahibinden.service.UserService;
+import com.eren.dstore.entity.User;
+import com.eren.dstore.service.UserService;
 
 @RestController
 public class LoginController extends BaseController {

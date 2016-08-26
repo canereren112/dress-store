@@ -1,11 +1,11 @@
-package com.eren.assignment.sahibinden.dao.jpa;
+package com.eren.dstore.dao.jpa;
 
 import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
-import com.eren.assignment.sahibinden.dao.CondimentDao;
-import com.eren.assignment.sahibinden.entity.Condiment;
+import com.eren.dstore.dao.CondimentDao;
+import com.eren.dstore.entity.Condiment;
 
 @Repository
 public class CondimentDaoJpa extends BaseDaoJpa<Condiment> implements CondimentDao {

@@ -1,4 +1,4 @@
-package com.eren.assignment.sahibinden.web;
+package com.eren.dstore.web;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
-import com.eren.assignment.sahibinden.exception.ResponseCodes;
-import com.eren.assignment.sahibinden.exception.ServiceResponse;
-import com.eren.assignment.sahibinden.exception.ServiceRuntimeException;
+import com.eren.dstore.exception.ResponseCodes;
+import com.eren.dstore.exception.ServiceResponse;
+import com.eren.dstore.exception.ServiceRuntimeException;
 
 
 

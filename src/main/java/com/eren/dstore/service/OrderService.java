@@ -1,10 +1,10 @@
-package com.eren.assignment.sahibinden.service;
+package com.eren.dstore.service;
 
 import java.util.List;
 
-import com.eren.assignment.sahibinden.exception.ServiceResponse;
-import com.eren.assignment.sahibinden.service.model.EntityStats;
-import com.eren.assignment.sahibinden.service.model.ShoppingCart;
+import com.eren.dstore.exception.ServiceResponse;
+import com.eren.dstore.service.model.EntityStats;
+import com.eren.dstore.service.model.ShoppingCart;
 
 public interface OrderService {
 

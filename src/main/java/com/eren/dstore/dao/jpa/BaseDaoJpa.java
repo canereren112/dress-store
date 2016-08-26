@@ -1,4 +1,4 @@
-package com.eren.assignment.sahibinden.dao.jpa;
+package com.eren.dstore.dao.jpa;
 
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
@@ -6,7 +6,7 @@ import java.lang.reflect.Type;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
-import com.eren.assignment.sahibinden.dao.BaseDao;
+import com.eren.dstore.dao.BaseDao;
 
 public abstract class BaseDaoJpa<E> implements BaseDao<E> {
 	@PersistenceContext

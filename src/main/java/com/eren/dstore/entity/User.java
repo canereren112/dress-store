@@ -1,6 +1,6 @@
-package com.eren.assignment.sahibinden.entity;
+package com.eren.dstore.entity;
 
-import com.eren.assignment.sahibinden.entity.BaseEntity;
+import com.eren.dstore.entity.BaseEntity;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import java.io.Serializable;

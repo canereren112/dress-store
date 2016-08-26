@@ -50,7 +50,7 @@
 		</encoder>
 	</appender>
 
-	<logger name="com.eren.assignment.sahibinden" additivity="false">
+	<logger name="com.eren.dstore" additivity="false">
 		<level value="DEBUG" />
 		<appender-ref ref="dailyRollingFileAppender" />
 		<appender-ref ref="minuteRollingFileAppender" />

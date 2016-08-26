@@ -1,4 +1,4 @@
-package com.eren.assignment.sahibinden.web;
+package com.eren.dstore.web;
 
 import java.security.Principal;
 
@@ -10,13 +10,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.eren.assignment.sahibinden.entity.OrderItem;
-import com.eren.assignment.sahibinden.exception.ServiceResponse;
-import com.eren.assignment.sahibinden.service.BeverageService;
-import com.eren.assignment.sahibinden.service.CondimentService;
-import com.eren.assignment.sahibinden.service.OrderService;
-import com.eren.assignment.sahibinden.service.ShoppingCartService;
-import com.eren.assignment.sahibinden.service.model.ShoppingCart;
+import com.eren.dstore.entity.OrderItem;
+import com.eren.dstore.exception.ServiceResponse;
+import com.eren.dstore.service.BeverageService;
+import com.eren.dstore.service.CondimentService;
+import com.eren.dstore.service.OrderService;
+import com.eren.dstore.service.ShoppingCartService;
+import com.eren.dstore.service.model.ShoppingCart;
 
 @RestController
 @Scope("request")

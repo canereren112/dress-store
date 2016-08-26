@@ -1,7 +1,7 @@
-package com.eren.assignment.sahibinden.service;
+package com.eren.dstore.service;
 
-import com.eren.assignment.sahibinden.entity.OrderItem;
-import com.eren.assignment.sahibinden.service.model.ShoppingCart;
+import com.eren.dstore.entity.OrderItem;
+import com.eren.dstore.service.model.ShoppingCart;
 
 public interface ShoppingCartService {
 

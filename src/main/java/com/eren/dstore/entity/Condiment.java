@@ -1,10 +1,10 @@
-package com.eren.assignment.sahibinden.entity;
+package com.eren.dstore.entity;
 
 import java.io.Serializable;
 import javax.persistence.*;
 
-import com.eren.assignment.sahibinden.entity.Beverage;
-import com.eren.assignment.sahibinden.entity.enums.HISTORICAL_ENTITY_STATUS;
+import com.eren.dstore.entity.Beverage;
+import com.eren.dstore.entity.enums.HISTORICAL_ENTITY_STATUS;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**

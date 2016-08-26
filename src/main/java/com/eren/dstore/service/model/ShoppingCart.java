@@ -1,4 +1,4 @@
-package com.eren.assignment.sahibinden.service.model;
+package com.eren.dstore.service.model;
 
 import java.util.ArrayList;
 
@@ -6,9 +6,9 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;
 
-import com.eren.assignment.sahibinden.entity.Order;
-import com.eren.assignment.sahibinden.entity.OrderItem;
-import com.eren.assignment.sahibinden.entity.User;
+import com.eren.dstore.entity.Order;
+import com.eren.dstore.entity.OrderItem;
+import com.eren.dstore.entity.User;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Component

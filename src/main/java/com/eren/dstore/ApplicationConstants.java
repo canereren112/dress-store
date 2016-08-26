@@ -1,4 +1,4 @@
-package com.eren.assignment.sahibinden;
+package com.eren.dstore;
 
 // TODO: Auto-generated Javadoc
 /**

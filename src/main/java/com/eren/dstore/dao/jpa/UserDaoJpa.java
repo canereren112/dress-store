@@ -1,11 +1,11 @@
-package com.eren.assignment.sahibinden.dao.jpa;
+package com.eren.dstore.dao.jpa;
 
 import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
-import com.eren.assignment.sahibinden.dao.UserDao;
-import com.eren.assignment.sahibinden.entity.User;
+import com.eren.dstore.dao.UserDao;
+import com.eren.dstore.entity.User;
 
 @Repository
 public class UserDaoJpa extends BaseDaoJpa<User> implements UserDao {

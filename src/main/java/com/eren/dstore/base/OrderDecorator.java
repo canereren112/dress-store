@@ -1,9 +1,9 @@
-package com.eren.assignment.sahibinden.base;
+package com.eren.dstore.base;
 
 import java.util.HashSet;
 import java.util.Set;
 
-import com.eren.assignment.sahibinden.entity.Beverage;
+import com.eren.dstore.entity.Beverage;
 
 public class OrderDecorator extends Beverage {
 	int totalCost;

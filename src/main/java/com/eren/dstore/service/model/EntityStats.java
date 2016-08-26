@@ -1,4 +1,4 @@
-package com.eren.assignment.sahibinden.service.model;
+package com.eren.dstore.service.model;
 
 public class EntityStats {
 	private String name;

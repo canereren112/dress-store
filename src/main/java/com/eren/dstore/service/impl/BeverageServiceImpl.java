@@ -1,4 +1,4 @@
-package com.eren.assignment.sahibinden.service.impl;
+package com.eren.dstore.service.impl;
 
 import java.util.Date;
 import java.util.List;
@@ -8,13 +8,13 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.eren.assignment.sahibinden.dao.BeverageDao;
-import com.eren.assignment.sahibinden.entity.Beverage;
-import com.eren.assignment.sahibinden.entity.enums.HISTORICAL_ENTITY_STATUS;
-import com.eren.assignment.sahibinden.exception.ResponseCodes;
-import com.eren.assignment.sahibinden.exception.ServiceResponse;
-import com.eren.assignment.sahibinden.exception.ServiceRuntimeException;
-import com.eren.assignment.sahibinden.service.BeverageService;
+import com.eren.dstore.dao.BeverageDao;
+import com.eren.dstore.entity.Beverage;
+import com.eren.dstore.entity.enums.HISTORICAL_ENTITY_STATUS;
+import com.eren.dstore.exception.ResponseCodes;
+import com.eren.dstore.exception.ServiceResponse;
+import com.eren.dstore.exception.ServiceRuntimeException;
+import com.eren.dstore.service.BeverageService;
 
 @Service
 @Transactional(readOnly = true, propagation = Propagation.SUPPORTS)

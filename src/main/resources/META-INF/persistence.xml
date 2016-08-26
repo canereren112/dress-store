@@ -5,14 +5,14 @@
 	<persistence-unit name="KahveciEfendi">
 		<!-- The autodetection only works if the classes are packaged as a JAR. 
 			Doesn't work for unit tests. Go figure -->
-		<class>com.eren.assignment.sahibinden.entity.Beverage</class>
-		<class>com.eren.assignment.sahibinden.entity.BaseEntity</class>
-		<class>com.eren.assignment.sahibinden.entity.HistoricalEntity</class>
-		<class>com.eren.assignment.sahibinden.entity.Condiment</class>
-		<class>com.eren.assignment.sahibinden.entity.User</class>
-		<class>com.eren.assignment.sahibinden.entity.Order</class>
-		<class>com.eren.assignment.sahibinden.entity.OrderItem</class>
-		<class>com.eren.assignment.sahibinden.entity.OrderItemDetail</class>
+		<class>com.eren.dstore.entity.Beverage</class>
+		<class>com.eren.dstore.entity.BaseEntity</class>
+		<class>com.eren.dstore.entity.HistoricalEntity</class>
+		<class>com.eren.dstore.entity.Condiment</class>
+		<class>com.eren.dstore.entity.User</class>
+		<class>com.eren.dstore.entity.Order</class>
+		<class>com.eren.dstore.entity.OrderItem</class>
+		<class>com.eren.dstore.entity.OrderItemDetail</class>
 
 		<!-- <provider>org.hibernate.ejb.HibernatePersistence</provider> -->
 

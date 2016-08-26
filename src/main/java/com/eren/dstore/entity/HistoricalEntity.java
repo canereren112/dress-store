@@ -1,4 +1,4 @@
-package com.eren.assignment.sahibinden.entity;
+package com.eren.dstore.entity;
 
 import java.math.BigDecimal;
 import java.util.Date;

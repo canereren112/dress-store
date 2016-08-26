@@ -1,13 +1,13 @@
-package com.eren.assignment.sahibinden.service.impl;
+package com.eren.dstore.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.eren.assignment.sahibinden.dao.UserDao;
-import com.eren.assignment.sahibinden.entity.User;
-import com.eren.assignment.sahibinden.service.UserService;
+import com.eren.dstore.dao.UserDao;
+import com.eren.dstore.entity.User;
+import com.eren.dstore.service.UserService;
 
 @Service
 @Transactional(readOnly = true, propagation = Propagation.SUPPORTS)

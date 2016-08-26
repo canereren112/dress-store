@@ -1,11 +1,11 @@
-package com.eren.assignment.sahibinden.dao.jpa;
+package com.eren.dstore.dao.jpa;
 
 import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
-import com.eren.assignment.sahibinden.dao.BeverageDao;
-import com.eren.assignment.sahibinden.entity.Beverage;
+import com.eren.dstore.dao.BeverageDao;
+import com.eren.dstore.entity.Beverage;
 
 @Repository
 public class BeverageDaoJpa extends BaseDaoJpa<Beverage> implements BeverageDao {

@@ -1,9 +1,9 @@
-package com.eren.assignment.sahibinden.service.discount;
+package com.eren.dstore.service.discount;
 
 import java.util.Comparator;
 
-import com.eren.assignment.sahibinden.entity.OrderItem;
-import com.eren.assignment.sahibinden.service.model.ShoppingCart;
+import com.eren.dstore.entity.OrderItem;
+import com.eren.dstore.service.model.ShoppingCart;
 
 /**
  * Discount for item number exceeding limit

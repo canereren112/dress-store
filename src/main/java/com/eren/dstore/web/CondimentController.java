@@ -1,4 +1,4 @@
-package com.eren.assignment.sahibinden.web;
+package com.eren.dstore.web;
 
 import java.util.List;
 
@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.eren.assignment.sahibinden.entity.Condiment;
-import com.eren.assignment.sahibinden.exception.ServiceResponse;
-import com.eren.assignment.sahibinden.service.CondimentService;
+import com.eren.dstore.entity.Condiment;
+import com.eren.dstore.exception.ServiceResponse;
+import com.eren.dstore.service.CondimentService;
 
 @RestController
 public class CondimentController extends BaseController {

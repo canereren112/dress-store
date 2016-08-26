@@ -1,4 +1,4 @@
-package com.eren.assignment.sahibinden.service.impl;
+package com.eren.dstore.service.impl;
 
 import java.util.Date;
 import java.util.List;
@@ -8,18 +8,18 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.eren.assignment.sahibinden.dao.OrderDao;
-import com.eren.assignment.sahibinden.dao.OrderItemDao;
-import com.eren.assignment.sahibinden.dao.OrderItemDetailDao;
-import com.eren.assignment.sahibinden.entity.Order;
-import com.eren.assignment.sahibinden.entity.OrderItem;
-import com.eren.assignment.sahibinden.entity.OrderItemDetail;
-import com.eren.assignment.sahibinden.exception.ResponseCodes;
-import com.eren.assignment.sahibinden.exception.ServiceResponse;
-import com.eren.assignment.sahibinden.exception.ServiceRuntimeException;
-import com.eren.assignment.sahibinden.service.OrderService;
-import com.eren.assignment.sahibinden.service.model.EntityStats;
-import com.eren.assignment.sahibinden.service.model.ShoppingCart;
+import com.eren.dstore.dao.OrderDao;
+import com.eren.dstore.dao.OrderItemDao;
+import com.eren.dstore.dao.OrderItemDetailDao;
+import com.eren.dstore.entity.Order;
+import com.eren.dstore.entity.OrderItem;
+import com.eren.dstore.entity.OrderItemDetail;
+import com.eren.dstore.exception.ResponseCodes;
+import com.eren.dstore.exception.ServiceResponse;
+import com.eren.dstore.exception.ServiceRuntimeException;
+import com.eren.dstore.service.OrderService;
+import com.eren.dstore.service.model.EntityStats;
+import com.eren.dstore.service.model.ShoppingCart;
 
 @Service
 @Transactional(readOnly = true, propagation = Propagation.SUPPORTS)

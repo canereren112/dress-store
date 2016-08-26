@@ -1,4 +1,4 @@
-package com.eren.assignment.sahibinden.entity.enums;
+package com.eren.dstore.entity.enums;
 
 public enum HISTORICAL_ENTITY_STATUS {
     ACTIVE("A"), DEACTIVE("D");

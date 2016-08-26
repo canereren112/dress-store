@@ -1,4 +1,4 @@
-package com.eren.assignment.sahibinden.service.impl;
+package com.eren.dstore.service.impl;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -19,8 +19,8 @@ import org.springframework.test.context.jdbc.Sql.ExecutionPhase;
 import org.springframework.test.context.jdbc.SqlGroup;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.eren.assignment.sahibinden.entity.Beverage;
-import com.eren.assignment.sahibinden.service.BeverageService;
+import com.eren.dstore.entity.Beverage;
+import com.eren.dstore.service.BeverageService;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("classpath:**/servlet-context.xml")

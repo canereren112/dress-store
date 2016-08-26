@@ -1,6 +1,6 @@
-package com.eren.assignment.sahibinden.dao;
+package com.eren.dstore.dao;
 
-import com.eren.assignment.sahibinden.entity.User;
+import com.eren.dstore.entity.User;
 
 public interface UserDao extends BaseDao<User> {
 	public User getUserWithUserName(String userName);
