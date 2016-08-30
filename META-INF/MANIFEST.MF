@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: DressStore
+Bundle-SymbolicName: DressStore
+Bundle-Version: 1.0.0.qualifier
+Export-Package: com.eren.dstore,
+ com.eren.dstore.base,
+ com.eren.dstore.dao,
+ com.eren.dstore.dao.jpa,
+ com.eren.dstore.entity,
+ com.eren.dstore.entity.enums,
+ com.eren.dstore.exception,
+ com.eren.dstore.service,
+ com.eren.dstore.service.discount,
+ com.eren.dstore.service.impl,
+ com.eren.dstore.service.model,
+ com.eren.dstore.web
