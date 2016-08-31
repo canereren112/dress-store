@@ -2,7 +2,7 @@
 <configuration>
 
 	<property name="PRO_HOME"
-		value="/Users/firat/Documents/workspace/KahveciEfendi/logs" />
+		value="/Users/firat/Documents/workspace/DressStore/logs" />
 
 
 
@@ -18,10 +18,10 @@
 
 	<appender name="dailyRollingFileAppender"
 		class="ch.qos.logback.core.rolling.RollingFileAppender">
-		<File>${PRO_HOME}/KahveciEfendi.log</File>
+		<File>${PRO_HOME}/DressStore.log</File>
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
 			<!-- daily rollover -->
-			<FileNamePattern>${PRO_HOME}/KahveciEfendi%d{yyyy-MM-dd}.log
+			<FileNamePattern>${PRO_HOME}/DressStore%d{yyyy-MM-dd}.log
 			</FileNamePattern>
 
 			<!-- keep 30 days' worth of history -->
@@ -37,7 +37,7 @@
 		class="ch.qos.logback.core.rolling.RollingFileAppender">
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
 			<!-- rollover every minute -->
-			<FileNamePattern>${PRO_HOME}/KahveciEfendi-minute%d{yyyy-MM-dd_HH-mm}.log
+			<FileNamePattern>${PRO_HOME}/DressStore-minute%d{yyyy-MM-dd_HH-mm}.log
 			</FileNamePattern>
 
 			<!-- keep 1 day worth of history -->

@@ -48,12 +48,12 @@ app.controller('CoreController', function($scope, $http) {
 	}
 	
 	$scope.fillUserStatsView = function(){
-		$scope.getStats('http://localhost:9966/kahveciefendi/api/v1/stats/users');
+		$scope.getStats('http://localhost:9966/dstore/api/v1/stats/users');
 	}
 	
 	$scope.getAllViewDrinks = function(drinkType){
 		
-		var response = $http.get('http://localhost:9966/kahveciefendi/api/v1/' + drinkType);
+		var response = $http.get('http://localhost:9966/dstore/api/v1/' + drinkType);
 		response.success(function(response) {
             if (!angular.isUndefined(response.errorCode)) {
                 alert(response.message);
@@ -75,7 +75,7 @@ app.controller('CoreController', function($scope, $http) {
 
 	$scope.getAllOrderDrinks = function(drinkType){
 
-		var response = $http.get('http://localhost:9966/kahveciefendi/api/v1/' + drinkType);
+		var response = $http.get('http://localhost:9966/dstore/api/v1/' + drinkType);
 		response.success(function(response) {
             if (!angular.isUndefined(response.errorCode)) {
                 alert(response.message);

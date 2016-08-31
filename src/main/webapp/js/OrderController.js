@@ -8,7 +8,7 @@ app.controller('OrderController', function($scope, $http) {
 	
 	$scope.getAllDrinks = function(drinkType){
 
-		var response = $http.get('http://localhost:9966/kahveciefendi/api/v1/' + drinkType);
+		var response = $http.get('http://localhost:9966/dstore/api/v1/' + drinkType);
 		response.success(function(response) {
             if (!angular.isUndefined(response.errorCode)) {
                 alert(response.message);
@@ -55,7 +55,7 @@ app.controller('OrderController', function($scope, $http) {
 		$scope.orderDetailString = '{"beverage":'+	JSON.stringify($scope.selectedCofee) + ','+ $scope.orderItemDetails +'}';
 		$scope.orderDetailObject = JSON.parse( $scope.orderDetailString  );
 		console.log($scope.orderDetailString);
-		var response = $http.post('http://localhost:9966/kahveciefendi/api/v1/cart/items', $scope.orderDetailString);
+		var response = $http.post('http://localhost:9966/dstore/api/v1/cart/items', $scope.orderDetailString);
 		response.success(function(response) {
             if (!angular.isUndefined(response.errorCode)) {
                 alert(response.message);
@@ -72,7 +72,7 @@ app.controller('OrderController', function($scope, $http) {
 	}
 	
 	$scope.checkOutTheBasket= function(){
-		var response = $http.post('http://localhost:9966/kahveciefendi/api/v1/cart/orders');
+		var response = $http.post('http://localhost:9966/dstore/api/v1/cart/orders');
 		response.success(function(response) {
             if (!angular.isUndefined(response.errorCode)) {
                 alert(response.message);
@@ -83,7 +83,7 @@ app.controller('OrderController', function($scope, $http) {
 	}
 	
 	$scope.deleteFromBasket = function(index){
-		var response = $http.delete('http://localhost:9966/kahveciefendi/api/v1/cart/items/' + index);
+		var response = $http.delete('http://localhost:9966/dstore/api/v1/cart/items/' + index);
 		response.success(function(response) {
             if (!angular.isUndefined(response.errorCode)) {
                 alert(response.message);
@@ -94,7 +94,7 @@ app.controller('OrderController', function($scope, $http) {
 	}
 	
 	$scope.getCart = function(index){
-		var response = $http.get('http://localhost:9966/kahveciefendi/api/v1/cart/' );
+		var response = $http.get('http://localhost:9966/dstore/api/v1/cart/' );
 		response.success(function(response) {
             if (!angular.isUndefined(response.errorCode)) {
                 alert(response.message);

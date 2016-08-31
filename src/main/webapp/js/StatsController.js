@@ -16,24 +16,24 @@ app.controller('StatsController', function($scope, $http) {
 	};
 	
 	$scope.fillUserStatsView = function(){
-		$scope.getStats('http://localhost:9966/kahveciefendi/api/v1/stats/users');
+		$scope.getStats('http://localhost:9966/dstore/api/v1/stats/users');
 	}
 	
 	$scope.clickUserStatsButton = function (){
 		showStatsContent();
-		$scope.getStats('http://localhost:9966/kahveciefendi/api/v1/stats/users');
+		$scope.getStats('http://localhost:9966/dstore/api/v1/stats/users');
 	}
 	
 	$scope.clickCoffeeStatsButton = function (){
 		$scope.statsHeader='Icecekler';
 		 $scope.reducedCost='';
-		$scope.getStats('http://localhost:9966/kahveciefendi/api/v1/stats/beverages');
+		$scope.getStats('http://localhost:9966/dstore/api/v1/stats/beverages');
 	}
 			
 	$scope.clickCondimentStatsButton = function (){
 		$scope.statsHeader='Eklentiler';
 		 $scope.reducedCost='';
-		$scope.getStats('http://localhost:9966/kahveciefendi/api/v1/stats/condiments');
+		$scope.getStats('http://localhost:9966/dstore/api/v1/stats/condiments');
 	}
 	
 	$scope.getStats = function(url){

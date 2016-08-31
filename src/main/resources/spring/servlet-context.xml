@@ -28,7 +28,7 @@
 
 	<bean id="entityManagerFactory"
 		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
-		<property name="persistenceUnitName" value="KahveciEfendi" />
+		<property name="persistenceUnitName" value="DressStore" />
 		<property name="dataSource" ref="dataSource" />
 		<property name="persistenceProvider">
 			<bean class="org.hibernate.jpa.HibernatePersistenceProvider" />
@@ -46,7 +46,7 @@
 
 	<!-- <bean id="entityManagerFactory" -->
 	<!-- class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean"> -->
-	<!-- <property name="persistenceUnitName" value="KahveciEfendi" /> -->
+	<!-- <property name="persistenceUnitName" value="DressStore" /> -->
 	<!-- <property name="dataSource" ref="dataSource" /> -->
 	<!-- <property name="jpaVendorAdapter"> -->
 	<!-- <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter"> -->

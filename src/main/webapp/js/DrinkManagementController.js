@@ -36,7 +36,7 @@ app.controller('DrinkManagementController', function($scope, $http) {
 	$scope.addNewCoffee = function(){
 		
 		var dataObj = { name:$scope.coffeeName, cost: $scope.coffeePrice};
-		var response = $http.post('http://localhost:9966/kahveciefendi/api/v1/beverages', dataObj);
+		var response = $http.post('http://localhost:9966/dstore/api/v1/beverages', dataObj);
 		response.success(function(response) {
 
             alert(response.message);
@@ -57,7 +57,7 @@ app.controller('DrinkManagementController', function($scope, $http) {
 
 	$scope.getAllCoffees = function(){
 		
-		var response = $http.get('http://localhost:9966/kahveciefendi/api/v1/beverages');
+		var response = $http.get('http://localhost:9966/dstore/api/v1/beverages');
 		response.success(function(response) {
             if (!angular.isUndefined(response.errorCode)) {
                 alert(response.message);
@@ -78,7 +78,7 @@ app.controller('DrinkManagementController', function($scope, $http) {
 	$scope.addNewCondiment = function(){
 		
 		var dataObj = { name:$scope.condimentName, cost: $scope.condimentPrice};
-		var response = $http.post('http://localhost:9966/kahveciefendi/api/v1/condiments', dataObj);
+		var response = $http.post('http://localhost:9966/dstore/api/v1/condiments', dataObj);
 		response.success(function(response) {
             alert(response.message);
             
@@ -97,7 +97,7 @@ app.controller('DrinkManagementController', function($scope, $http) {
 
 	$scope.getAllCondiments = function(){
 		
-		var response = $http.get('http://localhost:9966/kahveciefendi/api/v1/condiments');
+		var response = $http.get('http://localhost:9966/dstore/api/v1/condiments');
 		response.success(function(response) {
 		// todo error durumunu check et
             if (!angular.isUndefined(response.errorCode)) {
@@ -116,7 +116,7 @@ app.controller('DrinkManagementController', function($scope, $http) {
 	
   
 	$scope.deleteDrink = function(id, drinkType){
-		var response = $http.delete('http://localhost:9966/kahveciefendi/api/v1/' +drinkType + '/'+ id);
+		var response = $http.delete('http://localhost:9966/dstore/api/v1/' +drinkType + '/'+ id);
 		response.success(function(response) {
 			alert(response.message);
 			
@@ -142,7 +142,7 @@ app.controller('DrinkManagementController', function($scope, $http) {
 	}
 	
 	$scope.editDrink = function(modalDrink, drinkType){
-		var response = $http.put('http://localhost:9966/kahveciefendi/api/v1/' + drinkType+ '/' + modalDrink.id, modalDrink);
+		var response = $http.put('http://localhost:9966/dstore/api/v1/' + drinkType+ '/' + modalDrink.id, modalDrink);
 		response.success(function(response) {
 			alert(response.message);
 			
